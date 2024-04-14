@@ -61,7 +61,7 @@ union mqtt_header
 
 struct mqtt_connect
 {
-    union mqtt_header;
+    union mqtt_header header;
     union
     {
         unsigned char byte;
@@ -147,7 +147,7 @@ struct mqtt_publish
 
 struct mqtt_ack
 {
-    union mqtt_header;
+    union mqtt_header header;
     unsigned short pkt_id;
 };
 
